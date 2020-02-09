@@ -84,3 +84,9 @@ steps:
     -H "Accept: application/vnd.github.mister-fantastic-preview+json" \
     -H "Authorization: Basic $(gh_auth_header)"
   displayName: '[GitHub] Get Page Build Status'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'public'
+    publishLocation: 'Container'
