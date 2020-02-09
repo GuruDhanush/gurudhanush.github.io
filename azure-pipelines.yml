@@ -84,15 +84,3 @@ steps:
     -H "Accept: application/vnd.github.mister-fantastic-preview+json" \
     -H "Authorization: Basic $(gh_auth_header)"
   displayName: '[GitHub] Get Page Build Status'
-
-- task: GitHubRelease@1
-  displayName: "Github release"
-  inputs:
-    repositoryName: '$(Build.Repository.Name)'
-    action: 'create'
-    target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
-    gitHubConnection: 'GuruDhanush'
-    addChangeLog: true
