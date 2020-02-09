@@ -1,3 +1,0 @@
-### Blog
-
-Made using gatsby
