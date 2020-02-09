@@ -94,5 +94,5 @@ steps:
     tagSource: 'gitTag'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
-    gitHubConnection: $(github_pat)
+    gitHubConnection: 'GuruDhanush'
     addChangeLog: true
